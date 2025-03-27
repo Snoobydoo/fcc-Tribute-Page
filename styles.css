@@ -5,7 +5,8 @@ body {
 
 h1,
 #sous-titre,
-footer {
+footer,
+#album-image {
   font-family: "Reggae One", "Arial";
   text-align: center;
 }
@@ -29,6 +30,7 @@ figcaption {
   font-family: Arial;
   font-size: 18px;
   text-align: center;
+  margin-top: 15px;
 }
 
 #img-div {
@@ -49,11 +51,16 @@ figcaption {
   width: 800px;
 }
 
+.album-name {
+  font-weight: bolder;
+  font-style: italic;
+}
+
 li {
   display: flex;
   justify-content: space-between;
-  font-family: Arial;
-  font-size: 18px;
+  font-family: "Alegreya", Arial;
+  font-size: 20px;
   padding: 20px 10px;
 }
 
@@ -64,8 +71,21 @@ li {
   line-height: 25px;
 }
 
+.name {
+    font-style: italic;
+}
+
+.lieu {
+    font-weight: bold;
+}
+
+#album-image p {
+  margin-top: 2px;
+  margin-bottom: -10px;
+}
+
 #album-image {
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding: 0;
   border-top: 2px solid #70aa7d;
@@ -75,5 +95,5 @@ li {
 .album-image {
   max-height: 25vh;
   max-width: 25vh;
-  padding: 3vh;
+  margin: 2vh 2vh 3vh 2vh;
 }
