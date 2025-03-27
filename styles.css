@@ -43,7 +43,6 @@ figcaption {
 .date {
   font-family: "Reggae One", Arial;
   text-align: left;
-  margin-left: 170px;
   text-decoration: underline;
 }
 
@@ -59,7 +58,7 @@ figcaption {
 
 li {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-family: "Alegreya", Arial;
   font-size: 20px;
   padding: 20px 10px;
@@ -67,8 +66,7 @@ li {
 
 .tribute-text {
   text-align: left;
-  max-width: 300px;
-  margin-right: 170px;
+  max-width: 550px;
   line-height: 25px;
 }
 
@@ -94,7 +92,7 @@ li {
 }
 
 .album-image {
-  max-height: 25vh;
-  max-width: 25vh;
-  margin: 2vh 2vh 3vh 2vh;
+  height: 18%;
+  width: 18%;
+  margin: 2vh 0.5vh 1vh 0.5vh;
 }
