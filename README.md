@@ -1,4 +1,4 @@
-# Survey Form - freeCodeCamp
+# Tribute Page - freeCodeCamp
 
 Ceci est le deuxième projet nécessaire à la certification "Responsive Web Designer" de freeCodeCamp, il s'agit d'une Tribute Page.
 
