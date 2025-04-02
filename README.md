@@ -18,10 +18,6 @@ Pour modifier ce projet il est recommandé d'utiliser :
 
 - Visual StudioCode
 
-## Contributing
-
-Si vous souhaitez contribuer, lisez le fichier [CONTRIBUTING.md](https://example.org) pour savoir comment le faire.
-
 ## Auteurs
 
 * **Théo Evanno** (https://github.com/theoevanno)
