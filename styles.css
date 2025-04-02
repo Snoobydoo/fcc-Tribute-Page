@@ -4,7 +4,7 @@ body {
 }
 
 h1,
-#sous-titre,
+#subtitle,
 footer,
 #album-image {
   font-family: "Reggae One", "Arial";
@@ -12,7 +12,11 @@ footer,
   color: #dbe9de;
 }
 
-#sous-titre,
+footer q {
+  font-size: 12px;
+}
+
+#subtitle,
 .date {
   font-size: 20px;
 }
@@ -43,13 +47,12 @@ figcaption {
 .date {
   font-family: "Reggae One", Arial;
   text-align: left;
-  margin-left: 170px;
   text-decoration: underline;
 }
 
 #tribute-info {
   margin: 0 auto 20px auto;
-  width: 1000px;
+  width: 800px;
 }
 
 .album-name {
@@ -57,9 +60,10 @@ figcaption {
   font-style: italic;
 }
 
-li {
+#tribute-info li {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
   font-family: "Alegreya", Arial;
   font-size: 20px;
   padding: 20px 10px;
@@ -67,22 +71,29 @@ li {
 
 .tribute-text {
   text-align: left;
-  max-width: 300px;
-  margin-right: 170px;
+  max-width: 550px;
   line-height: 25px;
 }
 
 .name {
-    font-style: italic;
+  font-style: italic;
 }
 
-.lieu {
-    font-weight: bold;
+.place {
+  font-weight: bold;
+  font-style: unset;
 }
 
 #album-image p {
   margin-top: 2px;
-  margin-bottom: -10px;
+  margin-bottom: -25px;
+}
+
+#album-image li {
+  list-style: none;
+  display: inline;
+  position: relative;
+  left: -3%;
 }
 
 #album-image {
@@ -94,7 +105,21 @@ li {
 }
 
 .album-image {
-  max-height: 25vh;
-  max-width: 25vh;
-  margin: 2vh 2vh 3vh 2vh;
+  height: 18%;
+  width: 18%;
+  margin: 2vh 0.5vh 1.5vh 0.5vh;
+}
+
+footer a {
+  color: #70aa7d;
+}
+
+footer a:hover {
+  color: #9ac3a4;
+}
+
+/* OBLIGATOIRE ? */
+
+footer a:visited {
+  color: #a9765d;
 }
