@@ -27,10 +27,14 @@
       rel="stylesheet"
     />
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="title">Naâman - Hommages</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="language-switch">
+      <a href="index_en.html" class="lang-btn">🇬🇧 English</a>
+    </div>
     <main id="main">
       <h1>Naâman (Martin Mussard) - Hommages</h1>
       <h2 id="subtitle">
@@ -50,21 +54,21 @@
       <section id="tribute-info">
         <ol>
           <li>
-            <span class="date">1990&nbsp;:</span>
+            <span class="date">1990</span>
             <span class="tribute-text"
               >Naissance à <em class="place">Mont-Saint-Aignan</em>,
               <em class="place">France</em>.</span
             >
           </li>
           <li>
-            <span class="date">2001&nbsp;:</span>
+            <span class="date">2001</span>
             <span class="tribute-text"
               >Commence a écouter du reggae et apprend ses premiers accords de
               guitare avec son père.</span
             >
           </li>
           <li>
-            <span class="date">2006&nbsp;:</span>
+            <span class="date">2006</span>
             <span class="tribute-text"
               >Rencontre un groupe d'amis qui auront une grande influence sur
               lui,
@@ -74,14 +78,14 @@
             >
           </li>
           <li>
-            <span class="date">2007&nbsp;:</span>
+            <span class="date">2007</span>
             <span class="tribute-text"
               >Fonde un groupe avec ses amis, ils l'appellent
               <em class="name">Le sound system Natural B.</em></span
             >
           </li>
           <li>
-            <span class="date">2008&nbsp;:</span>
+            <span class="date">2008</span>
             <span class="tribute-text"
               >Création de <em class="name">Natural B</em> avec
               <em class="name">Pedro</em>, un dérivé qui touche d'avantage a
@@ -89,7 +93,7 @@
             >
           </li>
           <li>
-            <span class="date">2010&nbsp;:</span>
+            <span class="date">2010</span>
             <span class="tribute-text"
               >Rencontre avec <em class="name">Young Kah</em> et création du
               groupe <em class="name">Naâman and the Deep Rockers Crew</em>,
@@ -98,21 +102,21 @@
             >
           </li>
           <li>
-            <span class="date">2011&nbsp;:</span>
+            <span class="date">2011</span>
             <span class="tribute-text"
               >Rencontre avec <em class="name">Fatbabs</em> qui deviendra un
               grand ami et un membre important de son groupe.</span
             >
           </li>
           <li>
-            <span class="date">2012&nbsp;:</span>
+            <span class="date">2012</span>
             <span class="tribute-text"
               >Première apparition sur scène et sortie de la mixtape
               <em class="album-name">Deep Rockers.</em></span
             >
           </li>
           <li>
-            <span class="date">2013&nbsp;:</span>
+            <span class="date">2013</span>
             <span class="tribute-text"
               >Sortie de son premier album
               <em class="album-name">Deep Rockers, Back a Yard</em> et première
@@ -120,7 +124,7 @@
             >
           </li>
           <li>
-            <span class="date">2015&nbsp;:</span>
+            <span class="date">2015</span>
             <span class="tribute-text"
               >Sortie de son EP <em class="album-name">Know yourself</em> en
               début d'année, il voyage au Népal, au Liban, en Inde et en
@@ -129,7 +133,7 @@
             >
           </li>
           <li>
-            <span class="date">2017&nbsp;:</span>
+            <span class="date">2017</span>
             <span class="tribute-text"
               >Sortie de son troisième album
               <em class="album-name">Beyond</em> dans lequel nous le verrons
@@ -138,7 +142,7 @@
             >
           </li>
           <li>
-            <span class="date">2019&nbsp;:</span>
+            <span class="date">2019</span>
             <span class="tribute-text"
               >Sortie d'un album live intitulé
               <em class="album-name">A Live Story</em>, cette année il apprendra
@@ -147,7 +151,7 @@
           </li>
 
           <li>
-            <span class="date">2022&nbsp;:</span>
+            <span class="date">2022</span>
             <span class="tribute-text"
               >Sortie de son cinquième album
               <em class="album-name">Temple Road</em> initialement prévu pour
@@ -155,7 +159,7 @@
             >
           </li>
           <li>
-            <span class="date">2023&nbsp;:</span>
+            <span class="date">2023</span>
             <span class="tribute-text"
               >Commence à se produire de nouveau sur scène lors d'une dizaine de
               concerts, il publiera également un vinyle baptisé
@@ -163,7 +167,7 @@
             >
           </li>
           <li>
-            <span class="date">2025&nbsp;:</span>
+            <span class="date">2025</span>
             <span class="tribute-text"
               >Décède le 7 février à
               <em class="place">Villenave-d'Ornon</em> des suites de sa tumeur
@@ -174,7 +178,7 @@
       </section>
       <div id="album-image">
         <p>Cliquez sur les pochettes pour accéder à chacun de ses albums.</p>
-        <ol>
+        <ol class="album-grid">
           <li>
             <a
               target="_blank"
@@ -197,30 +201,30 @@
           </li>
           <li>
             <a
-              alt="beyond album cover"
               target="_blank"
               href="https://open.spotify.com/album/3Y73vMO5jL8arxWY5bO5ZW?si=eZKWvMUUSmOeDnXIrzstZg"
               ><img
+                alt="beyond album cover"
                 class="album-image"
                 src="https://i.discogs.com/PTnsM5Mw-VLs5i9spnWCgjaZYFxfCEBkfIynmsFifOM/rs:fit/g:sm/q:90/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwOTk3/NzQ3LTE1MDc5MjAx/MTQtNjc3Ny5qcGVn.jpeg"
             /></a>
           </li>
           <li>
             <a
-              alt="a live story album cover"
               target="_blank"
               href="https://open.spotify.com/album/3T3tKU2ZOM8VthUadvFR3R?si=-tTcOtR8S3KvTBzoEwASZQ"
               ><img
+                alt="a live story album cover"
                 class="album-image"
                 src="https://static.fnac-static.com/multimedia/Images/FR/NR/9e/a9/a8/11053470/1507-1/tsp20190410140149/Live-Story.jpg"
             /></a>
           </li>
-          <li>
+          <li class="last-album">
             <a
-              alt="temple road album cover"
               target="_blank"
               href="https://open.spotify.com/album/7GR1ch3GsNVIuXWamBquot?si=SZG5P1iDSzy6EON5-oGdYQ"
               ><img
+                alt="temple road album cover"
                 class="album-image"
                 src="https://static.fnac-static.com/multimedia/Images/FR/NR/8a/83/d0/13665162/1507-1/tsp20220203124227/Temple-Road.jpg"
             /></a>

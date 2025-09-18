@@ -1,125 +1,458 @@
+/* Variables CSS pour une meilleure maintenance */
+:root {
+  --primary-color: #70aa7d;
+  --secondary-color: #dbe9de;
+  --accent-color: #9ac3a4;
+  --visited-color: #a9765d;
+  --background-overlay: rgba(0, 0, 0, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --border-radius: 15px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: url(https://wallpaper.forfun.com/fetch/12/128ab829561e26433fb71f19764cfdea.jpeg);
-  color: #dbe9de;
+  background-image: linear-gradient(var(--background-overlay), var(--background-overlay)),
+                    url(https://wallpaper.forfun.com/fetch/12/128ab829561e26433fb71f19764cfdea.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--secondary-color);
+  font-family: "Alegreya", Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
-h1,
-#subtitle,
-footer,
-#album-image {
-  font-family: "Reggae One", "Arial";
+/* Bouton de changement de langue */
+#language-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  color: var(--accent-color);
+}
+
+/* Container principal avec effet glassmorphism */
+#main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Titres avec animations */
+h1 {
+  font-family: "Reggae One", Arial, sans-serif;
   text-align: center;
-  color: #dbe9de;
+  color: var(--secondary-color);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: slideInFromTop 1s ease-out;
 }
 
-footer q {
-  font-size: 12px;
+#subtitle {
+  font-family: "Reggae One", Arial, sans-serif;
+  text-align: center;
+  color: var(--accent-color);
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 2rem;
+  animation: slideInFromBottom 1s ease-out 0.2s both;
 }
 
-#subtitle,
-.date {
-  font-size: 20px;
+/* Animations d'entrée */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Section image avec effet moderne */
+#img-div {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow);
+  animation: fadeIn 1s ease-out 0.4s both;
 }
 
 #image {
   display: block;
-  margin: auto;
-  border: 2px solid #70aa7d;
-  width: 80%;
-  max-width: 100%;
-  border-radius: 10px;
-  image-rendering: smooth;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  object-fit: cover;
+}
+
+#image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 figcaption {
-  font-family: Arial;
-  font-size: 18px;
+  font-family: "Alegreya", Arial, sans-serif;
+  font-size: 1.1rem;
   text-align: center;
-  margin-top: 15px;
-}
-
-#img-div {
-  border-bottom: 2px solid #70aa7d;
-  margin: 0 20px 25px 20px;
-  padding: 25px 0 25px 0;
-}
-
-.date {
-  font-family: "Reggae One", Arial;
-  text-align: left;
-  text-decoration: underline;
-}
-
-#tribute-info {
-  margin: 0 auto 20px auto;
-  width: 800px;
-}
-
-.album-name {
-  font-weight: bolder;
+  margin-top: 1.5rem;
   font-style: italic;
+  color: var(--accent-color);
+}
+
+/* Section timeline moderne */
+#tribute-info {
+  margin: 2rem 0;
+  animation: fadeIn 1s ease-out 0.6s both;
+}
+
+#tribute-info ol {
+  list-style: none;
+  position: relative;
+}
+
+/* Ligne de temps verticale */
+#tribute-info ol::before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
 }
 
 #tribute-info li {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+  position: relative;
+}
+
+#tribute-info li:hover {
+  transform: translateX(10px);
+  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Points sur la timeline */
+#tribute-info li::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--glass-bg);
+  z-index: 2;
+}
+
+.date {
+  font-family: "Reggae One", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: bold;
   display: flex;
-  justify-content: flex-start;
-  gap: 20px;
-  font-family: "Alegreya", Arial;
-  font-size: 20px;
-  padding: 20px 10px;
+  align-items: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .tribute-text {
-  text-align: left;
-  max-width: 550px;
-  line-height: 25px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--secondary-color);
+}
+
+.album-name {
+  font-weight: bold;
+  font-style: italic;
+  color: var(--accent-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .name {
   font-style: italic;
+  color: var(--accent-color);
 }
 
 .place {
   font-weight: bold;
-  font-style: unset;
+  color: var(--primary-color);
+}
+
+/* Section albums avec grid moderne */
+#album-image {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: fadeIn 1s ease-out 0.8s both;
 }
 
 #album-image p {
-  margin-top: 2px;
-  margin-bottom: -25px;
+  font-family: "Reggae One", Arial, sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+}
+
+#album-image ol,
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  justify-items: center;
+}
+
+/* Centrer le dernier album quand il est seul sur sa ligne */
+.album-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.last-album {
+  grid-column: 2 / 4;
 }
 
 #album-image li {
-  list-style: none;
-  display: inline;
-  position: relative;
-  left: -3%;
-}
-
-#album-image {
-  width: 70%;
-  margin: auto;
-  padding: 0;
-  border-top: 2px solid #70aa7d;
-  border-bottom: 2px solid #70aa7d;
+  transition: var(--transition);
 }
 
 .album-image {
-  height: 18%;
-  width: 18%;
-  margin: 2vh 0.5vh 1.5vh 0.5vh;
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.album-image:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary-color);
+}
+
+/* Footer moderne */
+footer {
+  font-family: "Reggae One", Arial, sans-serif;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  animation: fadeIn 1s ease-out 1s both;
+}
+
+footer q {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 footer a {
-  color: #70aa7d;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+  position: relative;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background: var(--accent-color);
+  transition: var(--transition);
+  transform: translateX(-50%);
 }
 
 footer a:hover {
-  color: #9ac3a4;
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--accent-color);
 }
 
-/* OBLIGATOIRE ? */
+footer a:hover::after {
+  width: 100%;
+}
 
 footer a:visited {
-  color: #a9765d;
+  color: var(--visited-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #main {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  #language-switch {
+    position: relative;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  #tribute-info li {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #tribute-info ol::before {
+    display: none;
+  }
+
+  #tribute-info li::before {
+    display: none;
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .last-album {
+    grid-column: 1 / 3;
+  }
+
+  .album-image {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .last-album {
+    grid-column: 1 / 3;
+  }
+}
+
+/* Effet de parallaxe subtil */
+@media (min-width: 1024px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+/* Amélioration de l'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Mode sombre automatique */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-overlay: rgba(0, 0, 0, 0.8);
+    --glass-bg: rgba(0, 0, 0, 0.3);
+  }
 }
